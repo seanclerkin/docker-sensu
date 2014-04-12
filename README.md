@@ -1,4 +1,4 @@
 docker-sensu
 ============
 
-docker-sensu
+Docker Sensu
