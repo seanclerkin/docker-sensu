@@ -6,7 +6,8 @@ ADD sensu.repo /etc/yum.repos.d/sensu.repo
 RUN yum -y install http://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 RUN wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.3.0/rabbitmq-server-3.3.0-1.noarch.rpm
-RUN yum install -y rabbitmq-server-3.3.0-1.noarch.rpm sensu redis git supervisor
+RUN yum install -y rabbitmq-server-3.3.0-1.noarch.rpm sensu redis git wget python-setuptools
+RUN easy_install supervisor
 
 RUN /opt/sensu/embedded/bin/gem install redphone --no-rdoc --no-ri
 RUN /opt/sensu/embedded/bin/gem install mail --no-rdoc --no-ri
