@@ -3,7 +3,7 @@ MAINTAINER Sean Clerkin
 
 ADD sensu.repo /etc/yum.repos.d/sensu.repo
 
-RUN yum install http://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+RUN yum install -y http://www.mirrorservice.org/sites/dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 RUN yum install -y wget
 RUN rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 RUN wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.3.0/rabbitmq-server-3.3.0-1.noarch.rpm
